@@ -1,0 +1,14 @@
+# modules
+node_modules/
+
+# compiled files
+dist/
+
+src/logger.*
+src/app.log
+
+.prettierrc
+
+# environment
+.env
+.env.*
