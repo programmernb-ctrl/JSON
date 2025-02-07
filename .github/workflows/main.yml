@@ -23,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '20'
 
       - name: Output Date
         run: echo ${{ steps.date.outputs.date }}
@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           corepack enable
-          pnpm install --frozen-lockfile --ignore-scripts  # Ensure dependencies are locked and installed correctly and ignore installing scripts
+          pnpm install --frozen-lockfile # Ensure dependencies are locked and installed correctly and ignore installing scripts
 
       - name: Run the task
         env:
