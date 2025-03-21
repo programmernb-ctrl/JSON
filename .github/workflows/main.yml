@@ -38,9 +38,7 @@ jobs:
           REPO_OWNER: ${{ secrets.REPO_OWNER }}
           REPO_NAME: ${{ secrets.REPO_NAME }}
         run: |
-          pnpm run format  # Run the format script
-          node src/index.mjs  # Run your main script
-
+          pnpm run start # start from our index.mjs script
       - name: Commit and push data.json
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
