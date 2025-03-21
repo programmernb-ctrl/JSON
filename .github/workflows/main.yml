@@ -1,4 +1,4 @@
-name: Weekly Task
+name: Hourly Update
 
 on:
   schedule:
