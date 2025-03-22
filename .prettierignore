@@ -8,6 +8,11 @@ src/logger.*
 src/app.log
 
 .prettierrc
+pnpm-lock.*
+package.*
+
+.github/*
+.github/**
 
 # environment
 .env
