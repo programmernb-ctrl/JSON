@@ -43,7 +43,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: main
-          commit_message: "Updated data"
+          commit_message: "chore: update data"
           file_pattern: dist/*.json
           commit_user_name: GitHub Actions Bot
         env:
