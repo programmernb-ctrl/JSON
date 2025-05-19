@@ -1,67 +1,69 @@
+# @format
+
 name: Weekly Task
 
 on:
-  schedule:
-    - cron: '0 0 * * 5'
-  workflow_dispatch:
+    schedule:
+        - cron: '0 0 * * 5'
+    workflow_dispatch:
 
 jobs:
-  run-weekly-task:
-    runs-on: ubuntu-latest
-    env:
-      TZ: Europe/Berlin
-    steps:
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y.%m.%d.%H')"
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-
-      - name: Output Date
-        run: echo ${{ steps.date.outputs.date }}
-
-      - name: Install dependencies
-        run: |
-          corepack enable
-          pnpm install --frozen-lockfile  # Ensure dependencies are locked and installed correctly
-
-      - name: Run the task
+    run-weekly-task:
+        runs-on: ubuntu-latest
         env:
-          REPO_OWNER: ${{ secrets.REPO_OWNER }}
-          REPO_NAME: ${{ secrets.REPO_NAME }}
-        run: |
-          pnpm run format  # Run the format script
-          node src/index.mjs  # Run your main script
+            TZ: Europe/Berlin
+        steps:
+            - name: Get current date
+              id: date
+              run: echo "::set-output name=date::$(date +'%Y.%m.%d.%H')"
 
-      - name: Commit and push data.json
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: main
-          commit_message: "Updated data"
-          file_pattern: dist/*.json
-          commit_user_name: GitHub Actions Bot
-        env:
-          GITHUB_TOKEN: ${{ secrets.A_TOKEN }}
+            - name: Checkout repository
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 1
 
-      - name: Create and push initial tag
-        run: |
-          git tag ${{ steps.date.outputs.date }}  # Tag with the current date
-          git push origin ${{ steps.date.outputs.date }}  # Push the tag to the repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.A_TOKEN }}
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '20'
 
-      - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: dist/data.json
-          tag_name: ${{ steps.date.outputs.date }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.A_TOKEN }}
+            - name: Output Date
+              run: echo ${{ steps.date.outputs.date }}
+
+            - name: Install dependencies
+              run: |
+                  corepack enable
+                  pnpm install --frozen-lockfile  # Ensure dependencies are locked and installed correctly
+
+            - name: Run the task
+              env:
+                  REPO_OWNER: ${{ secrets.REPO_OWNER }}
+                  REPO_NAME: ${{ secrets.REPO_NAME }}
+              run: |
+                  pnpm run format  # Run the format script
+                  node src/index.mjs  # Run your main script
+
+            - name: Commit and push data.json
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  branch: main
+                  commit_message: 'Updated data'
+                  file_pattern: dist/*.json
+                  commit_user_name: GitHub Actions Bot
+              env:
+                  GITHUB_TOKEN: ${{ secrets.A_TOKEN }}
+
+            - name: Create and push initial tag
+              run: |
+                  git tag ${{ steps.date.outputs.date }}  # Tag with the current date
+                  git push origin ${{ steps.date.outputs.date }}  # Push the tag to the repository
+              env:
+                  GITHUB_TOKEN: ${{ secrets.A_TOKEN }}
+
+            - name: Create GitHub release
+              uses: softprops/action-gh-release@v2
+              with:
+                  files: dist/data.json
+                  tag_name: ${{ steps.date.outputs.date }}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.A_TOKEN }}
