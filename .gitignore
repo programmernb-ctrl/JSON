@@ -2,4 +2,6 @@
 
 node_modules/
 
+dist/data.json
+
 src/app.log
