@@ -1,11 +1,3 @@
 {
-  "data": {
-    "sha": "7f87ecd6b53e44260bfe97ac3f8ef059d4709910",
-    "updatedAt": "2025-05-17T15:39:42Z",
-    "commit": "chore: update to version v0.0.2 (#49)\n\n+ added useWebview handler\n+ added another example 😎\n+ updateddiscord invite link in webview page\n+ minor code changes",
-    "tree": {
-      "sha": "4684e8e623f61541c7340c1a79d7bc3ed810611b",
-      "url": "https://api.github.com/repos/programmernb-ctrl/rv_gui/git/trees/4684e8e623f61541c7340c1a79d7bc3ed810611b"
-    }
-  }
+  "data": {}
 }
