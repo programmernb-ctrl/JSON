@@ -40,7 +40,6 @@ jobs:
                   REPO_OWNER: ${{ secrets.REPO_OWNER }}
                   REPO_NAME: ${{ secrets.REPO_NAME }}
               run: |
-                  pnpm run format  # Run the format script
                   node src/index.mjs  # Run your main script
 
             - name: Commit and push data.json
