@@ -1,11 +1,11 @@
 {
   "data": {
-    "sha": "18c3f3bcd2458dc5a2b6d83a349cecf3108801ac",
-    "updatedAt": "2025-07-09T19:05:12Z",
-    "commit": "Merge pull request #68 from programmernb-ctrl/programmernb-ctrl-readme-1\n\nchore: bump version in readme to v0.0.3",
+    "sha": "bae4907ffd7f72c65add8e96e1b5ef6cf9a9048e",
+    "updatedAt": "2025-07-11T13:33:24Z",
+    "commit": "(deps) Bump @vitejs/plugin-vue from 5.2.4 to 6.0.0 in /gui in the main-dependencies group across 1 directory (#61)\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
     "tree": {
-      "sha": "c16b29c5ecbde05366c30c8faf23fd00aa3aa1c3",
-      "url": "https://api.github.com/repos/programmernb-ctrl/rv_gui/git/trees/c16b29c5ecbde05366c30c8faf23fd00aa3aa1c3"
+      "sha": "4836a8b48384fbb29de84dc81c86cac1e5cffc69",
+      "url": "https://api.github.com/repos/programmernb-ctrl/rv_gui/git/trees/4836a8b48384fbb29de84dc81c86cac1e5cffc69"
     }
   }
 }
