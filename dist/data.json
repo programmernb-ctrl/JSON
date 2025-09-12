@@ -1,11 +1,11 @@
 {
   "data": {
-    "sha": "789982ed07d3f7d9f3929a8ef0d9aaa0b7679953",
-    "updatedAt": "2025-08-22T17:23:16Z",
-    "commit": "Merge pull request #75 from programmernb-ctrl/dependabot/npm_and_yarn/game-dependencies-211fe3f9a5\n\n(deps) Bump @communityox/ox_lib from 3.30.10 to 3.31.0 in the game-dependencies group across 1 directory",
+    "sha": "0e994ee00fc4bc1883cc18566c998708790782f0",
+    "updatedAt": "2025-09-06T12:30:56Z",
+    "commit": "Merge pull request #85 from programmernb-ctrl/dependabot/npm_and_yarn/gui/vite-plugin-vue-devtools-8.0.1\n\n(deps) Bump vite-plugin-vue-devtools from 7.7.7 to 8.0.1 in /gui",
     "tree": {
-      "sha": "ec224b22295705df1eb80a1182ceea217a79346c",
-      "url": "https://api.github.com/repos/programmernb-ctrl/rv_gui/git/trees/ec224b22295705df1eb80a1182ceea217a79346c"
+      "sha": "b7710e5b96fd62e95afda5bc439c81454273b8bc",
+      "url": "https://api.github.com/repos/programmernb-ctrl/rv_gui/git/trees/b7710e5b96fd62e95afda5bc439c81454273b8bc"
     }
   }
 }
