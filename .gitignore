@@ -3,5 +3,5 @@
 node_modules/
 
 dist/data.json
-
 src/app.log
+pnpm-lock.yaml
