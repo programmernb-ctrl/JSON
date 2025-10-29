@@ -8,11 +8,9 @@ dotenv.config();
 const REPO_OWNER = process.env.REPO_OWNER;
 const REPO_NAME = process.env.REPO_NAME;
 
-const BASE_URL = 'https://api.github.com';
-
 async function updateJSON() {
 	try {
-		const response = await fetch(`${BASE_URL}/repos/${REPO_OWNER}/${REPO_NAME}/commits`, {
+		const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/commits`, {
 			headers: {
 				'X-GitHub-Api-Version': '2022-11-28',
 				Accept: 'application/vnd.github+json',
